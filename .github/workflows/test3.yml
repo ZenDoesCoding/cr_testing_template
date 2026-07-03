@@ -1,0 +1,14 @@
+name: Test 3 (Calculator)
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Run Tests
+        run: python test3/test_calculator.py
